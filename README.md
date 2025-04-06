@@ -10,12 +10,14 @@ Plugin will select pods with specified label key and answer on A requests IP-add
 In-cluster deploy
 ```
 kubeapi
-kubehostport [ZONES...] {
+coreha [ZONES...] {
   ttl TTL
   labelKey kubernetes.pod/label
   strictHostPort BOOL
 }
 ```
+
+
 For local deploy add path to kubeconfig
 ```
 kubeapi {
@@ -29,7 +31,7 @@ kubeapi {
   kubeapi {
     kubeconfig ~/.kube/config
   }
-  kubehostport coreha.my-cluster.shturval {
+  coreha coreha.my-cluster.shturval {
     ttl 15
     labelKey shturval.link/serviceName
     strictHostPort true
